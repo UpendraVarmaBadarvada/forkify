@@ -7,7 +7,7 @@ export default class Search{
     async getRecipes() {
         
         try{
-            const res=await axios(`${cors}http://food2fork.com/api/search?key=${key}&q=${this.query}`);
+            const res=await axios(`https://forkify-api.herokuapp.com/api/search?q=${this.query}`);
             this.recipes=res.data.recipes;
         }   
         catch(error){
